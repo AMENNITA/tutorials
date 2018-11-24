@@ -1,3 +1,6 @@
+-- Unlock the HR user if locked
+ALTER USER hr IDENTIFIED BY hr ACCOUNT UNLOCK;
+
 DROP TABLE hr.xx_employees;
 
 CREATE TABLE hr.xx_employees
