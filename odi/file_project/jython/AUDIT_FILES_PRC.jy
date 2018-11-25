@@ -1,0 +1,35 @@
+import os,glob
+from java.sql import SQLException
+
+path = '<%=odiRef.getOption("FILES_PATH")%>'
+pattern=os.path.join(path,'<%=odiRef.getOption("FILES_PATTERN")%>')
+
+# Goto files directory to get the file List
+os.chdir(path)
+files=glob.glob(pattern)
+
+# Form the DB connection
+src_conn = odiRef.getJDBCConnection("SRC")
+sql_stmt = src_conn.createStatement()
+
+for file in files:
+    filename = os.path.basename(file)
+    
+    # Get the file record count
+    lineCount=os.system("wc -l %s | cut -d " " -f1"%(filename))
+    
+    sql_query = """
+    INSERT INTO hr.files_audit VALUES ('EMP',NULL,'%s','%s','PICKED',%d,SYSDATE,NULL,NULL,NULL,NULL)
+    """%(path,filename,lineCount)
+
+    try:
+        # Execute the statement to make entry in the audit table
+        sqlSmt.execute(sql_query)
+    except SQLException, se:
+        raise 'Error with Query \n%s'%(sql_query)
+
+# Close the connection
+sql_stmt.close()
+src_conn.close()
+
+
