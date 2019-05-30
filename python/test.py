@@ -1,18 +1,10 @@
-import os
+communication = [[] for m in range(4)]
+for m in range(4):
+    while len(communication) == 0 or len(
+            communication[m]) != 2:  # and len(communication[m]) != 2:  # or communication[m][0] == communication[m][1]:
+        communication[m] = ([int(i) for i in input("{} - sender receiver : ".format(m + 1)).split() if
+                              1 <= int(i) <= 5])
+        print(m, communication[m], len(communication[m]))
+    print("Incrementing...")
 
-path = os.path.join(os.path.expanduser("~"), "amaindola")
-os.chdir(path)
-print(os.getcwd())
-
-# Read the PDF File
-from PyPDF2 import PdfFileReader
-
-file = os.path.join(path, "test.pdf")
-pdf = PdfFileReader(file)
-
-# Print pdf Info
-text = pdf.getPage(3).extractText()
-print(text)
-
-from sys import version
-print(version)
+print(communication)
