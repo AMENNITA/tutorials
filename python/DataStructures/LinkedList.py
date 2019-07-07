@@ -2,7 +2,7 @@ class Node:
     def __init__(self, data=None, next_node=None, prev_node=None):
         self.data = data
         self.next_node = next_node
-        # self.prev_node = prev_node  # Only for Double Linked List
+        self.prev_node = prev_node  # Only for Double Linked List
 
     def __repr__(self):
         return repr(self.data)
@@ -75,7 +75,7 @@ class LinkedList:
             self.size -= 1
 
     # Insert an element at a given position
-    def insert_at(self, at=0, data=None):
+    def insertAt(self, at=0, data=None):
         if at > self.size - 1:
             print("Invalid position, cannot exceed size : {}".format(self.size))
         elif at == 0:
@@ -92,7 +92,7 @@ class LinkedList:
             self.size += 1
 
     # Remove an element at a given position
-    def remove_at(self, at=0):
+    def removeAt(self, at=0):
         """Removes an element from the List a given Position"""
         if at > self.size - 1:
             print("Invalid position {}, cannot exceed : {}".format(at, self.size - 1))

@@ -19,9 +19,9 @@ def test_single_linkedlist():
     list.insert(50)
     print(list)
 
-    list.remove_at(3)
+    list.removeAt(3)
     print(list)
-    list.insert_at(3, 10)
+    list.insertAt(3, 10)
     print(list)
 
     # Test with String
@@ -30,7 +30,7 @@ def test_single_linkedlist():
     list.insert('m')
     list.insert('m')
     print(list)
-    list.remove_at(2)
+    list.removeAt(2)
     list.insert('i')
     list.insert('t')
     print(list)

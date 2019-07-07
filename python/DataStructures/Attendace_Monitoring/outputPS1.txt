@@ -1,0 +1,49 @@
+Total no. of Employees Present today : 26
+Employee id 139563 is present today.
+Employee id 139557 is absent today.
+Employee id 139595 is absent today.
+Employee id 139583 is absent today.
+Employee id 139587 is present today.
+Employee id 139582 is absent today.
+Employee id 139569 is absent today.
+Employee id 139566 is present today.
+Employee id 139590 is present today.
+Employee id 139576 is present today.
+Employee id 139568 is present today.
+Employee id 139593 is absent today.
+Employee id 139597 is absent today.
+Employee id 139578 is present today.
+Employee id 139559 is absent today.
+Employee id 139575 is present today.
+Employee id 139586 is absent today.
+Employee id 139589 did not swipe today.
+Employee id 139572 did not swipe today.
+Employee id 139583 did not swipe today.
+Employee id 139559 did not swipe today.
+Employee id 139569 did not swipe today.
+Employee id 139598 did not swipe today.
+Employee id 139560 swiped 2 times today and is currently in office.
+Employee id 139558 swiped 3 times today and is currently outside office.
+Employee id 139554 did not swipe today.
+Employee id 139579 swiped 1 times today and is currently outside office.
+Employee id 139595 did not swipe today.
+Employee id 139575 swiped 1 times today and is currently outside office.
+Employee id 139561 did not swipe today.
+Employee id 139577 swiped 4 times today and is currently in office.
+Employee id 139570 did not swipe today.
+Employee id 139591 swiped 2 times today and is currently in office.
+Employee id 139588 swiped 2 times today and is currently in office.
+Employee id 139584 swiped 2 times today and is currently in office.
+Employee id 139567 swiped 1 times today and is currently outside office.
+Employee id 139592 swiped 1 times today and is currently outside office.
+Range: 139553 to 139567
+Employee Attendance:
+139553, 2, in
+139555, 2, in
+139558, 3, out
+139560, 2, in
+139562, 3, out
+139563, 4, in
+139564, 1, out
+139566, 1, out
+Employee id 139563 swiped the most number of times toady with a count of 4
