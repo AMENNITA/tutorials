@@ -121,7 +121,7 @@ class AttendanceTree:
         """Method to view the Tree height"""
         return self.get_height(self.root)
 
-    def search_emp(self, emp_id):
+    def _search_id_rec(self, emp_id):
         """Wrapper Search method"""
         if self.root is None:
             print("Tree is Empty")
@@ -130,7 +130,7 @@ class AttendanceTree:
             return self.search(emp_id, self.root)
 
     def insert_emp(self, emp_id):
-        "Wrapper Insert method"
+        """Wrapper Insert method"""
         if self.root is None:
             self.root = EmpNode(emp_id)
             # print("Assigned Root")
@@ -154,7 +154,7 @@ class AttendanceTree:
         """Method to count the Number of Employees in the Tree"""
         file_name = "outputPS1.txt"
         count = self.get_num_nodes(self.root)
-        print("Total no. of Employees present : {}".format(count))
+        print("Total no. of Employees today : {}".format(count))
         try:
             f = open(file_name, 'w')
             f.writelines("Total no. of Employees Present today : {}\n".format(self.get_num_nodes(self.root), 0))
@@ -172,11 +172,12 @@ class AttendanceTree:
                 if line.split(":")[0] == "searchId":
                     emp_id = int(line.split(":")[1])
                     # print("Searching for emp_id {}".format(emp_id))
-                    if self.search_emp(emp_id) is not None:
+                    if self._search_id_rec(emp_id) is not None:
                         op.writelines("Employee id {} is present today.\n".format(emp_id))
                     else:
                         op.writelines("Employee id {} is absent today.\n".format(emp_id))
             print("Published search results in {}".format(output_file))
+            op.writelines("\n")
             op.close()
 
     def how_often(self):
@@ -189,15 +190,16 @@ class AttendanceTree:
                 if line.split(":")[0] == "howOften":
                     emp_id = int(line.split(":")[1])
                     # print("Tallying swipe for emp_id {}".format(emp_id))
-                    node = self.search_emp(emp_id)
+                    node = self._search_id_rec(emp_id)
                     if node is not None:
                         op.writelines(
                             "Employee id {} swiped {} times today and is currently {} office.\n".format(emp_id,
                                                                                                         node.attendance_count,
-                                                                                                        "in" if node.attendance_count % 2 == 0 else "outside"))
+                                                                                                        "outside" if node.attendance_count % 2 == 0 else "in"))
                     else:
                         op.writelines("Employee id {} did not swipe today.\n".format(emp_id))
             print("Published howOften results in {}".format(output_file))
+            op.writelines("\n")
             op.close()
 
     def traverse_visitor(self, node, max_swipe=(None, 0)):
@@ -232,11 +234,11 @@ class AttendanceTree:
             fp.writelines("Employee Attendance:\n")
             for i in range(start_id, end_id):
                 # Search the Node
-                emp_node = self.search_emp(i)
+                emp_node = self._search_id_rec(i)
                 if emp_node is not None:
                     # print(emp_node)
                     fp.writelines("{}, {}, {}\n".format(emp_node.emp_id, emp_node.attendance_count,
-                                                        "in" if emp_node.attendance_count % 2 == 0 else "out"))
+                                                        "out" if emp_node.attendance_count % 2 == 0 else "in"))
 
             print("Files written Successfully")
 
@@ -254,18 +256,9 @@ attn_201906 = AttendanceTree()
 # attn_201906.insert_emp(139560)
 # attn_201906.insert_emp(139550)
 #
-# # node = attn_201906.search_emp(139553)
-# # print(node)
-# node = attn_201906.search_emp(139557)
-# print(node)
-#
-# attn_201906.print_inorder(attn_201906.root, 0)
-# print("\n" * 2)
-# attn_201906.print_preorder(attn_201906.root, 0)
 
 attn_201906.read_employees_rec()
-
-# print(attn_201906)
+attn_201906.print_tree_info()
 
 attn_201906.headcount_rec()
 
@@ -273,11 +266,9 @@ attn_201906.search_id_rec()
 
 attn_201906.how_often()
 
-attn_201906.print_tree_info()
-
-# attn_201906.print_inorder(attn_201906.root)
 print(attn_201906)
 
-attn_201906.print_range_present(139553, 139567)
-
 attn_201906.frequent_visitor()
+
+attn_201906.print_range_present(10, 40)
+
