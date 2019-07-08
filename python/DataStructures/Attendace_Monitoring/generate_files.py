@@ -51,5 +51,5 @@ def generate_prompt_file(file_name, start_id, end_id, limit):
     print("File written successfully.")
 
 
-# generate_input_file("inputPS1.txt", 139553, 139593, 50)
-generate_prompt_file("promptsPS1.txt", 139553, 139600, 40)
+# generate_input_file("inputPS1.txt", 1, 100, 50)
+generate_prompt_file("promptsPS1.txt", 1, 100, 60)
