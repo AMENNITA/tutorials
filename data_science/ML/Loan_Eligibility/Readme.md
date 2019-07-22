@@ -22,6 +22,9 @@ The training data provided with the problem statement gives approval status of p
 
 
 ## Aim of Assignment
-•	Building a Predictive Model
-•	Evaluate the model.
-•	Refine the model, as appropriate
+1. Building a Predictive Model
+   - Select a method for performing the analytic task.
+   - Carry out descriptive summarization of data and make observations.
+   - Identify relevant, irrelevant attributes for building model.
+2. Evaluate the model.
+3. Refine the model, as appropriate
