@@ -124,13 +124,12 @@ class Snake():
 def get_snack(color):
     """ Get a Random snack in the Board """
     global snake
-    snake_boxes = snake.body
 
     while True:
         x = random.randint(0, rows)
         y = random.randint(0, rows)
         # Check if Box is in the Snake Body
-        if len(list(filter(lambda box: box.pos == (x, y), snake_boxes))) == 0:
+        if len(list(filter(lambda box: box.pos == (x, y), snake.body))) == 0:
             return Box(start=(x, y), color=color)
 
 
@@ -183,7 +182,8 @@ def main():
             snack = get_snack(snack_color)
 
         # Game Over if Snake ate himself
-        # filter(lambda box: box.pos = , snake.body)
+        # filter(lambda box: box.pos = snake.body[0].start, snake.body)
+
 
         draw_board(win)
         # flag = False
