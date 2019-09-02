@@ -44,7 +44,8 @@ def merge_sort(items):
 
 
 # items = [random.randint(0, 100) for i in range(10)]
-items = [65, 3, 80, 84, 22, 55, 100, 5, 26, 32]
+# items = [65, 3, 80, 84, 22, 55, 100, 5, 26, 32]
+items = [3, 5, 7, 3, 2, 4, 1, 9, 10, 5, 4, 4]
 
 sorted_item = merge_sort(items)
 print(sorted_item)

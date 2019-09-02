@@ -2,14 +2,14 @@ import random
 from itertools import permutations
 
 
-def merge(list_1, list_2):
+def merge(list_1, list_2, pos):
     """ This method will merge the given two items and return the sorted output """
     l1, l2 = len(list_1), len(list_2)  # Store the length of each list
     merged_output = [None for i in range(l1 + l2)]
     i, j = 0, 0
     # Compare each element of the two lists till one of them is exhausted
     while i < l1 and j < l2:
-        if list_1[i] <= list_2[j]:
+        if list_1[i][pos] <= list_2[j][pos]:
             merged_output[i + j] = list_1[i]
             i += 1
         else:
@@ -28,20 +28,19 @@ def merge(list_1, list_2):
     return merged_output
 
 
-def merge_sort(items):
-    """ This method will Divide the input list until only 1 item remains
+def merge_sort(items, position=0):
+    """ This method will merge sort the Given list of Tuples at the provided position
     """
-    # print(items)
     # Divide the unsorted list until only 1 element remains
     if len(items) <= 1:
         return items
 
     mid = len(items) // 2
     # Merge sort recursively on both hl1ves
-    left, right = merge_sort(items[0:mid]), merge_sort(items[mid:])
+    left, right = merge_sort(items[0:mid], position), merge_sort(items[mid:], position)
     # print(left, right)
     # Return the merged output
-    return merge(left, right)
+    return merge(left, right, position)
 
 
 def generate_input_file(filename, N):
@@ -125,7 +124,7 @@ def greedy_output(manuf_input):
         Sort the Manufacturing input based on Manufacturing time
     """
     # Sort the input based on Manufacturing time
-    manuf_input.sort(key=lambda x: x[1])
+    # manuf_input.sort(key=lambda x: x[1])
     production_seq, total_prod_time, idle_am_tim = calc_prod_time(manuf_input)
     print("Mobiles should be produced in the order: {}.".format(production_seq))
     print("Total production time for all mobiles is: {}.".format(total_prod_time))
@@ -144,4 +143,8 @@ display(manuf_input)
 # Check all the possible Production time with Manufacturing Input
 # all_prod_time()
 
-greedy_output(manuf_input)
+# Sort the Manufacturing time
+manuf_input_sorted = merge_sort(manuf_input, 1)
+
+# Check the Greedy output to know the production time
+greedy_output(manuf_input_sorted)
