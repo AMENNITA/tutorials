@@ -1,39 +1,5 @@
-import numpy as np
 import random
 from itertools import permutations
-
-
-def generate_input_file(filename, N):
-    """ This method will generate the file having mobile details """
-    with open(filename, "w") as fp:
-        for i in range(N):
-            fp.writelines("{} / {} / {}\n".format(i + 1, random.randint(1, 10), random.randint(1, 10)))
-
-
-def read_input(filename):
-    """ This method will read the given file and will return the Information in a List of Tuples """
-    info = []
-    with open(filename, "r") as fp:
-        for line in fp.readlines():
-            if line.strip() is not None:
-                value = list(map(lambda x: int(x.strip()), line.split("/")))
-                info.append(tuple(value))
-    # Return the values
-    return info
-
-
-def display(mobiles_info):
-    """ Print the Manufacturing Information"""
-    num_mobiles = len(mobiles_info)
-    if num_mobiles > 0:
-        row_format = "| {:^14}" * 3
-        print("-" * 50)
-        print(row_format.format("Mobile(i)", "PMi(minutes)", "AMi(minutes)") + " |")
-        print("-" * 50)
-        for i, mobile in enumerate(mobiles_info):
-            print(row_format.format(mobile[0], mobile[1], mobile[2]) + " |")
-        print("-" * 50)
-        print("")
 
 
 def merge(list_1, list_2):
@@ -78,11 +44,56 @@ def merge_sort(items):
     return merge(left, right)
 
 
+def generate_input_file(filename, N):
+    """ This method will generate the file having mobile details """
+    with open(filename, "w") as fp:
+        for i in range(N):
+            fp.writelines("{} / {} / {}\n".format(i + 1, random.randint(1, 10), random.randint(1, 10)))
+
+
+def read_input(filename):
+    """ This method will read the given file and will return the Information in a List of Tuples """
+    info = []
+    with open(filename, "r") as fp:
+        for line in fp.readlines():
+            if line.strip() is not None:
+                value = list(map(lambda x: int(x.strip()), line.split("/")))
+                info.append(tuple(value))
+    # Return the values
+    return info
+
+
+def display(mobiles_info):
+    """ Print the Manufacturing Information"""
+    num_mobiles = len(mobiles_info)
+    if num_mobiles > 0:
+        row_format = "| {:^14}" * 3
+        print("-" * 50)
+        print(row_format.format("Mobile(i)", "PMi(minutes)", "AMi(minutes)") + " |")
+        print("-" * 50)
+        for i, mobile in enumerate(mobiles_info):
+            print(row_format.format(mobile[0], mobile[1], mobile[2]) + " |")
+        print("-" * 50)
+        print("")
+
+
+def cumsum(item):
+    """ This method will take a list as input and will return another list
+    having the Cumulative sum of the input"""
+    output = []
+    for i in range(len(item)):
+        if i == 0:
+            output.append(item[i])
+        else:
+            output.append(item[i] + output[i - 1])
+
+    return output
+
+
 def calc_prod_time(mobiles_info):
     production_seq = ", ".join(list(map(lambda x: str(x[0]), mobiles_info)))
-    pm_queue = np.cumsum(list(map(lambda x: x[1], mobiles_info)))
-    am_queue = np.cumsum([1] + list(map(lambda x: x[2], mobiles_info)))
-    # print(np.cumsum(np.ones(10, dtype=int)))
+    pm_queue = cumsum(list(map(lambda x: x[1], mobiles_info)))
+    am_queue = cumsum([1] + list(map(lambda x: x[2], mobiles_info)))
     # print(pm_queue)
     # print(am_queue)
     # First manufacturing will cause assembling time stalled
@@ -91,7 +102,8 @@ def calc_prod_time(mobiles_info):
         if am_queue[i] < pm_queue[i]:
             diff = pm_queue[i] - am_queue[i]
             idle_time += diff
-            am_queue[i:] = am_queue[i:] + diff
+            for j in range(i, len(am_queue)):
+                am_queue[j] = am_queue[j] + diff
     return production_seq, am_queue[-1], idle_time
     # print(am_queue)
 

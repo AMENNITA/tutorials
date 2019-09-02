@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e0edb668-b8cb-469d-a185-29c9de972882" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basics/Sorting/MergeSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basics/Sorting/MergeSort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/Mobile_Manufacturing/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/Mobile_Manufacturing/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Problems/Mobile_Manufacturing/mobile_manufacturing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/Mobile_Manufacturing/mobile_manufacturing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_science/DataVisualation/Basics/Basics - Introduction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_science/DataVisualation/Basics/Basics - Introduction.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_science/DataVisualation/Basics/Basics II - Controlling Graph.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_science/DataVisualation/Basics/Basics II - Controlling Graph.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_science/ML/Wine_Quality/WineDataset.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_science/ML/Wine_Quality/WineDataset.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MergeSort">
+  <component name="RunManager" selected="Python.mobile_manufacturing">
     <configuration name="BubbleSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DataStructures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,10 +158,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mobile_manufacturing" />
         <item itemvalue="Python.MergeSort" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.BubbleSort" />
-        <item itemvalue="Python.mobile_manufacturing" />
         <item itemvalue="Python.activitiy_selection" />
       </list>
     </recent_temporary>
@@ -181,6 +178,16 @@
       <updated>1563079097799</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
