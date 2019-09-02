@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0edb668-b8cb-469d-a185-29c9de972882" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Basics/Sorting/BubbleSort.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basics/Sorting/MergeSort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Problems/Mobile_Manufacturing/inputPS1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/Mobile_Manufacturing/inputPS1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basics/Sorting/MergeSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basics/Sorting/MergeSort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Problems/Mobile_Manufacturing/mobile_manufacturing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/Mobile_Manufacturing/mobile_manufacturing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_science/ML/Loan_Eligibility/Loan_Eligibility.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_science/ML/Loan_Eligibility/Loan_Eligibility.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_science/DataVisualation/Basics/Basics - Introduction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_science/DataVisualation/Basics/Basics - Introduction.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_science/DataVisualation/Basics/Basics II - Controlling Graph.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_science/DataVisualation/Basics/Basics II - Controlling Graph.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data_science/ML/Wine_Quality/WineDataset.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../data_science/ML/Wine_Quality/WineDataset.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/Snake/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/Snake/snake.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +32,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.werfad.KJumpConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,7 +46,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.BubbleSort">
+  <component name="RunManager" selected="Python.MergeSort">
     <configuration name="BubbleSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DataStructures" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,16 +131,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DataStructures" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Basics/Sorting" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Basics/Sorting/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.activitiy_selection" />
       <item itemvalue="Python.mobile_manufacturing" />
       <item itemvalue="Python.MergeSort" />
       <item itemvalue="Python.BubbleSort" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.BubbleSort" />
         <item itemvalue="Python.MergeSort" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.BubbleSort" />
         <item itemvalue="Python.mobile_manufacturing" />
         <item itemvalue="Python.activitiy_selection" />
       </list>
