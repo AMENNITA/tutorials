@@ -72,9 +72,12 @@ class Snake():
                 elif keys[pygame.K_DOWN]:
                     self.direction_x = 0
                     self.direction_y = 1
+                elif keys[pygame.QUIt]:
+                    print("Exiting game...")
+                    pygame.quit();
 
                 self.turns[self.head.pos[:]] = [self.direction_x, self.direction_y]
-                print(self.turns)
+                # print(self.turns)
 
         # Move all the boxes in the body
         for i, box in enumerate(self.body):
@@ -129,6 +132,10 @@ def get_snack(color):
         x = random.randint(0, rows)
         y = random.randint(0, rows)
         # Check if Box is in the Snake Body
+        print("Snack position ({},{})".format(x, y))
+        for box in snake.body:
+            print(box.pos)
+
         if len(list(filter(lambda box: box.pos == (x, y), snake.body))) == 0:
             return Box(start=(x, y), color=color)
 

@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9432ee0d-af62-4946-b3db-ba7528dbaeb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Basics/1-Array/ArrayOperatoins.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataStructures.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DataStructures.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/price_tracker/price_tracker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basics/1-Array/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basics/1-Array/operations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/Snake/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/Snake/snake.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
